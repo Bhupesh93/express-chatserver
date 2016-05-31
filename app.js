@@ -9,8 +9,8 @@ var mongooseService = require("./db/mongooseService");
 
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
-var register = require('./routes/registerUser');
+var userDetails = require('./routes/userDetailRoute');
+var user = require('./routes/userRoute');
 
 var app = express();
 
@@ -33,8 +33,8 @@ app.use(function(req,res,next){
 });
 
 app.use('/', routes);
-app.use('/users', users);
-app.use('/register', register);
+app.use('/userdetail', userDetails);
+app.use('/user', user);
 
 
 
