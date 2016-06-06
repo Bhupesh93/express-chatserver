@@ -11,6 +11,7 @@ var mongooseService = require("./db/mongooseService");
 var routes = require('./routes/index');
 var userDetails = require('./routes/userDetailRoute');
 var user = require('./routes/userRoute');
+var message = require('./routes/messageRoute');
 
 var app = express();
 
@@ -35,6 +36,7 @@ app.use(function(req,res,next){
 app.use('/', routes);
 app.use('/userdetail', userDetails);
 app.use('/user', user);
+app.use('/message', message);
 
 
 
